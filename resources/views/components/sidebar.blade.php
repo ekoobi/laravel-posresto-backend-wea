@@ -23,12 +23,14 @@
                     <li class=''>
                         <a class="nav-link"
                             href="{{ route('users.index') }}">Users</a>
+                            <a class="nav-link"
+                            href="{{ route('products.index') }}">Products</a>
+                            <a class="nav-link"
+                            href="{{ route('categories.index') }}">Categories</a>
                     </li>
 
                 </ul>
             </li>
-
-
 
     </aside>
 </div>
