@@ -60,9 +60,12 @@ class CategoryController extends Controller
     //update
     public function update(Request $request, $id)
     {
+
         //validate the request...
         $request->validate([
             'name' => 'required',
+            'description' => 'required',
+
             //'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -87,6 +90,7 @@ class CategoryController extends Controller
         //delete the request...
         $category = Category::find($id);
         $category->delete();
+
         return redirect()->route('categories.index')->with('success', 'Category deleted successfully');
     }
 }
